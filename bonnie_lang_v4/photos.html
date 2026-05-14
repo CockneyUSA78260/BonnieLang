@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="luxury">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos | Bonnie Lang</title>
+    <meta name="description" content="View photos of singer-songwriter Bonnie Lang, featuring live performances, portraits, and behind-the-scenes moments from the road.">
+    <meta property="og:title" content="Photos | Bonnie Lang">
+    <meta property="og:description" content="Gallery — live performances, portraits, and life on the road with Bonnie Lang.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- GLightbox for photo lightbox functionality -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <style>
+        .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased text-base-content bg-base-100">
+
+    <!-- Navigation -->
+    <div class="navbar bg-base-100/95 backdrop-blur sticky top-0 z-50 px-4 md:px-12 border-b border-white/5">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden" aria-label="Open navigation menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-white uppercase">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="story.html">Story</a></li>
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="photos.html" class="nav-active">Photos</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener">Shop</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest uppercase text-white" aria-label="Bonnie Lang Home">Bonnie Lang</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 font-medium tracking-wide text-white uppercase text-xs">
+                <li><a href="bio.html">BIO</a></li>
+                <li><a href="story.html">STORY</a></li>
+                <li><a href="music.html">MUSIC</a></li>
+                <li><a href="photos.html" class="nav-active">PHOTOS</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+                <li><a href="podcast.html">PODCAST</a></li>
+                <li><a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener">SHOP</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://open.spotify.com/artist/3xeUqtFaxcoSax3U1910Cu" target="_blank" rel="noopener" class="btn btn-primary btn-outline btn-sm hidden md:flex" aria-label="Listen to Bonnie Lang on Spotify">Listen Now</a>
+        </div>
+    </div>
+
+    <!-- Photos Grid -->
+    <section class="py-24 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-serif font-bold mb-4 uppercase text-white tracking-widest">Gallery</h1>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="opacity-60 text-sm">Click any photo to enlarge</p>
+            </div>
+
+            <!-- Photo Grid with GLightbox -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+
+                <a href="images/gallery-01.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Bonnie Lang performing live">
+                    <img src="images/gallery-01.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang performing live on stage" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <a href="images/gallery-02.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Life on the road — Bonnie's RV journey">
+                    <img src="images/gallery-02.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang and her RV — life on the road" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <a href="images/gallery-03.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="On stage in Texas">
+                    <img src="images/gallery-03.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang on stage in Texas" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <a href="images/gallery-04.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Bonnie with her guitar">
+                    <img src="images/gallery-04.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang with her guitar" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <a href="images/gallery-05.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Bonnie Lang portrait">
+                    <img src="images/gallery-05.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang — official portrait" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <a href="images/gallery-06.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Performing at Luckenbach">
+                    <img src="images/gallery-06.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang performing at Luckenbach" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <a href="images/gallery-07.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Outdoor inspiration">
+                    <img src="images/gallery-07.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang outdoors — finding inspiration on the road" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <a href="images/gallery-08.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Live performance energy">
+                    <img src="images/gallery-08.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang performing — live stage energy" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- CTA after gallery -->
+            <div class="text-center mt-20">
+                <p class="opacity-60 mb-6 uppercase tracking-widest text-sm">Follow for more behind-the-scenes</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://www.instagram.com/bonnielangmusic/" target="_blank" rel="noopener" class="btn btn-outline text-white gap-2" aria-label="Follow Bonnie Lang on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                    </a>
+                    <a href="videos.html" class="btn btn-primary gap-2">
+                        <i class="fas fa-play" aria-hidden="true"></i> Watch Videos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content border-t border-primary/20">
+        <aside>
+            <p class="text-4xl font-serif font-bold uppercase tracking-tighter text-white">Bonnie Lang</p>
+            <p class="opacity-70">Peace, Love, Happiness &amp; Big Ol' Hugs.</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title text-primary uppercase">Connect</h6>
+            <div class="grid grid-flow-col gap-6 text-3xl">
+                <a href="https://www.instagram.com/bonnielangmusic/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Follow on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/@BonnieLangMusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Subscribe on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://open.spotify.com/artist/3xeUqtFaxcoSax3U1910Cu" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Listen on Spotify"><i class="fab fa-spotify" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/BonnieLangMusic/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Follow on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            </div>
+        </nav>
+        <nav>
+            <h6 class="footer-title text-primary uppercase">Shop</h6>
+            <a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener" class="link link-hover text-lg">Official Merch Shop</a>
+        </nav>
+    </footer>
+
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: false,
+            openEffect: 'fade',
+            closeEffect: 'fade'
+        });
+    </script>
+
+</body>
+</html>
