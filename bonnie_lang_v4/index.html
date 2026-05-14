@@ -24,13 +24,7 @@
         .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
         .yt-embed-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; }
         .yt-embed-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1rem; }
-        /* Lite embed (click-to-play thumbnail) */
-        .yt-lite-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; background: #000; cursor: pointer; }
-        .yt-lite-embed > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; border-radius: 1rem; }
-        .yt-lite-embed:hover > img { transform: scale(1.05); }
-        .yt-lite-embed > .play-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); transition: background 0.2s; border-radius: 1rem; }
-        .yt-lite-embed:hover > .play-overlay { background: rgba(0,0,0,0.12); }
-        .yt-lite-embed > iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1rem; border: none; }
+
     </style>
 </head>
 <body class="min-h-screen font-sans antialiased text-base-content bg-base-100">
@@ -122,25 +116,14 @@
             <div class="mt-12">
                 <h3 class="text-2xl font-serif font-bold mb-6 text-center uppercase text-white">New Music Video — <span class="text-primary italic">Wildfire</span></h3>
                 <div class="max-w-3xl mx-auto">
-                    <div id="yt-wildfire" class="yt-lite-embed shadow-2xl"
-                         data-videoid="nvQFa97_bE8"
-                         onclick="loadYT(this)"
-                         role="button"
-                         aria-label="Play Wildfire — Bonnie Lang (Official Music Video)">
-                        <img src="https://img.youtube.com/vi/nvQFa97_bE8/maxresdefault.jpg"
-                             onerror="this.src='https://img.youtube.com/vi/nvQFa97_bE8/hqdefault.jpg'"
-                             alt="Wildfire — Bonnie Lang (Official Music Video)"
-                             loading="lazy">
-                        <div class="play-overlay">
-                            <div style="width:5rem;height:5rem;background:#c00;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(0,0,0,0.5);">
-                                <i class="fas fa-play text-white text-2xl" style="margin-left:4px;" aria-hidden="true"></i>
-                            </div>
-                            <span style="margin-top:0.75rem;color:#fff;font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;opacity:0.9;">Watch Music Video</span>
-                        </div>
+                    <div class="yt-embed-wrap shadow-2xl">
+                        <iframe title="Bonnie Lang — Wildfire (Official Music Video)"
+                                src="https://www.youtube.com/embed/nvQFa97_bE8?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy"></iframe>
                     </div>
-                    <p class="text-center mt-3 text-sm opacity-50">
-                        <i class="fab fa-youtube mr-1"></i> Opens on YouTube
-                    </p>
                 </div>
                 <p class="text-center mt-6 text-lg opacity-80 max-w-2xl mx-auto italic">
                     "Wildfire is my anthem song and it's for anyone who's ever felt stuck, lost, or forgotten their spark. It's a reminder that your fire never went out — it's just waiting for you to rise and let it burn again."
@@ -173,25 +156,14 @@
                     </div>
                 </div>
                 <div class="flex-1 w-full max-w-md">
-                    <div id="yt-lwyc" class="yt-lite-embed shadow-2xl"
-                         data-videoid="KdIUK8BDLU4"
-                         onclick="loadYT(this)"
-                         role="button"
-                         aria-label="Play Live While You Can — Bonnie Lang">
-                        <img src="https://img.youtube.com/vi/KdIUK8BDLU4/maxresdefault.jpg"
-                             onerror="this.src='https://img.youtube.com/vi/KdIUK8BDLU4/hqdefault.jpg'"
-                             alt="Live While You Can — Bonnie Lang"
-                             loading="lazy">
-                        <div class="play-overlay">
-                            <div style="width:5rem;height:5rem;background:#c00;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(0,0,0,0.5);">
-                                <i class="fas fa-play text-white text-2xl" style="margin-left:4px;" aria-hidden="true"></i>
-                            </div>
-                            <span style="margin-top:0.75rem;color:#fff;font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;opacity:0.9;">Watch Video</span>
-                        </div>
+                    <div class="yt-embed-wrap shadow-2xl">
+                        <iframe title="Bonnie Lang — Live While You Can"
+                                src="https://www.youtube.com/embed/KdIUK8BDLU4?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy"></iframe>
                     </div>
-                    <p class="text-center mt-3 text-sm opacity-50">
-                        <i class="fab fa-youtube mr-1"></i> Opens on YouTube
-                    </p>
                 </div>
             </div>
         </div>
@@ -255,20 +227,5 @@
         <p class="opacity-40 text-xs mt-4">&copy; 2026 Bonnie Lang. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        function loadYT(el) {
-            var id = el.getAttribute('data-videoid');
-            var iframe = document.createElement('iframe');
-            iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0');
-            iframe.setAttribute('frameborder', '0');
-            iframe.setAttribute('allow', 'autoplay; encrypted-media; fullscreen; picture-in-picture');
-            iframe.setAttribute('allowfullscreen', '');
-            iframe.setAttribute('title', el.getAttribute('aria-label') || 'Bonnie Lang Video');
-            iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1rem;border:none;';
-            el.style.cursor = 'default';
-            el.innerHTML = '';
-            el.appendChild(iframe);
-        }
-    </script>
 </body>
 </html>
