@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bonnielang",
+  "compatibility_date": "2026-05-14",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "bonnie_lang_v4"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
