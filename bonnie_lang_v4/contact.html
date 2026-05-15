@@ -14,6 +14,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        /* === Background Texture === */
+        html {
+            background-image: url('images/bg-texture.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-height: 100%;
+        }
+        body { background: transparent !important; }
+        .bg-base-100 { background-color: rgba(15, 10, 5, 0.87) !important; }
+        .bg-base-200 { background-color: rgba(20, 14, 8, 0.87) !important; }
+        .bg-base-300:not(body) { background-color: rgba(28, 18, 10, 0.87) !important; }
+        nav.bg-base-100, footer.bg-base-100 { background-color: rgba(15, 10, 5, 0.95) !important; }
         .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
     </style>
 </head>
@@ -74,7 +88,7 @@
                 <div class="flex-1">
                     <div class="bg-base-100 rounded-3xl p-10 shadow-2xl border border-white/5">
                         <h2 class="text-2xl font-serif font-bold uppercase mb-8 text-white">Send a Message</h2>
-                        <form class="space-y-6" onsubmit="return false;" novalidate>
+                        <form class="space-y-6" action="https://BonnieLang.us14.list-manage.com/subscribe/post?u=f2154d14bd0a787ab38611b49&amp;id=d6afac6bda&amp;f_id=00349fe0f0" method="post" target="_blank" novalidate>
                             <div class="form-control">
                                 <label class="label" for="contact-name">
                                     <span class="label-text uppercase tracking-wider text-sm">Contact Name <span class="text-primary">*</span></span>
@@ -108,7 +122,12 @@
                             <button type="submit" class="btn btn-primary btn-block btn-lg uppercase tracking-widest">
                                 <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i> Send Message
                             </button>
-                        </form>
+                        
+                <!-- Mailchimp anti-bot honeypot — do not remove -->
+                <div style="position:absolute;left:-5000px;" aria-hidden="true">
+                    <input type="text" name="b_f2154d14bd0a787ab38611b49_d6afac6bda" tabindex="-1" value="">
+                </div>
+                </form>
                     </div>
                 </div>
 

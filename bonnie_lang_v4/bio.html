@@ -15,6 +15,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        /* === Background Texture === */
+        html {
+            background-image: url('images/bg-texture.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-height: 100%;
+        }
+        body { background: transparent !important; }
+        .bg-base-100:not(body) { background-color: rgba(15, 10, 5, 0.87) !important; }
+        .bg-base-200 { background-color: rgba(20, 14, 8, 0.87) !important; }
+        .bg-base-300 { background-color: rgba(28, 18, 10, 0.87) !important; }
+        nav.bg-base-100, footer.bg-base-100 { background-color: rgba(15, 10, 5, 0.95) !important; }
         .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
     </style>
 </head>
@@ -116,6 +130,24 @@
     </section>
 
     <!-- Footer -->
+        <!-- Mailchimp Signup -->
+    <section class="py-12" style="background-color:rgba(20,14,8,0.87);">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h3 class="text-2xl font-serif font-bold mb-2 uppercase tracking-wider">Stay in the Loop</h3>
+            <p class="opacity-70 mb-6">Get show dates, new music, and stories from the road.</p>
+            <form action="https://BonnieLang.us14.list-manage.com/subscribe/post?u=f2154d14bd0a787ab38611b49&amp;id=d6afac6bda&amp;f_id=00349fe0f0" method="post" target="_blank" class="flex flex-col sm:flex-row gap-3 justify-center relative">
+                <input type="email" name="EMAIL" placeholder="Your Email Address"
+                       class="input input-bordered flex-1 max-w-sm bg-white/10 text-white placeholder-white/50 border-white/20 focus:border-primary"
+                       aria-label="Email address for mailing list" required>
+                <!-- Mailchimp anti-bot honeypot — do not remove -->
+                <div style="position:absolute;left:-5000px;" aria-hidden="true">
+                    <input type="text" name="b_f2154d14bd0a787ab38611b49_d6afac6bda" tabindex="-1" value="">
+                </div>
+                <button type="submit" class="btn btn-primary px-8 uppercase tracking-wider">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
     <footer class="footer p-10 bg-neutral text-neutral-content border-t border-primary/20">
         <aside>
             <p class="text-4xl font-serif font-bold uppercase tracking-tighter text-white">Bonnie Lang</p>
