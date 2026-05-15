@@ -22,7 +22,7 @@
             background-position: center top;
         }
         .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
-        /* === Background Texture === */
+                /* === Background Texture === */
         html {
             background-image: url('images/bg-texture.jpg');
             background-size: cover;
@@ -32,7 +32,7 @@
             min-height: 100%;
         }
         body { background: transparent !important; }
-        /* Semi-transparent DaisyUI sections so background shows through */
+        /* Semi-transparent sections — :not(body) ensures body itself stays transparent */
         .bg-base-100:not(body) { background-color: rgba(15, 10, 5, 0.87) !important; }
         .bg-base-200:not(body) { background-color: rgba(20, 14, 8, 0.87) !important; }
         .bg-base-300:not(body) { background-color: rgba(28, 18, 10, 0.87) !important; }

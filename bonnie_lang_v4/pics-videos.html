@@ -16,7 +16,7 @@
     <!-- GLightbox for photos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <style>
-        /* === Background Texture === */
+                /* === Background Texture === */
         html {
             background-image: url('images/bg-texture.jpg');
             background-size: cover;
@@ -26,9 +26,10 @@
             min-height: 100%;
         }
         body { background: transparent !important; }
+        /* Semi-transparent sections — :not(body) ensures body itself stays transparent */
         .bg-base-100:not(body) { background-color: rgba(15, 10, 5, 0.87) !important; }
-        .bg-base-200 { background-color: rgba(20, 14, 8, 0.87) !important; }
-        .bg-base-300 { background-color: rgba(28, 18, 10, 0.87) !important; }
+        .bg-base-200:not(body) { background-color: rgba(20, 14, 8, 0.87) !important; }
+        .bg-base-300:not(body) { background-color: rgba(28, 18, 10, 0.87) !important; }
         nav.bg-base-100, footer.bg-base-100 { background-color: rgba(15, 10, 5, 0.95) !important; }
         .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
         .yt-embed-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem 1rem 0 0; }

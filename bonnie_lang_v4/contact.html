@@ -14,7 +14,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* === Background Texture === */
+                /* === Background Texture === */
         html {
             background-image: url('images/bg-texture.jpg');
             background-size: cover;
@@ -24,8 +24,9 @@
             min-height: 100%;
         }
         body { background: transparent !important; }
-        .bg-base-100 { background-color: rgba(15, 10, 5, 0.87) !important; }
-        .bg-base-200 { background-color: rgba(20, 14, 8, 0.87) !important; }
+        /* Semi-transparent sections — :not(body) ensures body itself stays transparent */
+        .bg-base-100:not(body) { background-color: rgba(15, 10, 5, 0.87) !important; }
+        .bg-base-200:not(body) { background-color: rgba(20, 14, 8, 0.87) !important; }
         .bg-base-300:not(body) { background-color: rgba(28, 18, 10, 0.87) !important; }
         nav.bg-base-100, footer.bg-base-100 { background-color: rgba(15, 10, 5, 0.95) !important; }
         .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
