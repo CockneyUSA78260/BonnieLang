@@ -3,40 +3,461 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pics & Videos | Bonnie Lang</title>
+    <title>Pics &amp; Videos | Bonnie Lang</title>
+    <meta name="description" content="Watch videos, music videos, commercials, and TV appearances by Bonnie Lang. Plus a full photo gallery.">
+    <meta property="og:title" content="Pics &amp; Videos | Bonnie Lang">
+    <meta property="og:description" content="Music videos, commercials, TV clips, Christmas videos, and photo gallery from Bonnie Lang.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- GLightbox for photos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <style>
+                /* === Background Texture === */
+        html {
+            background-image: url('images/bg-texture.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-height: 100%;
+        }
+        body { background: transparent !important; }
+        /* Semi-transparent sections — :not(body) ensures body itself stays transparent */
+        .bg-base-100:not(body) { background-color: rgba(15, 10, 5, 0.87) !important; }
+        .bg-base-200:not(body) { background-color: rgba(20, 14, 8, 0.87) !important; }
+        .bg-base-300:not(body) { background-color: rgba(28, 18, 10, 0.87) !important; }
+        nav.bg-base-100, footer.bg-base-100 { background-color: rgba(15, 10, 5, 0.95) !important; }
+        .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
+        .yt-embed-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem 1rem 0 0; }
+        .yt-embed-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    </style>
 </head>
-<body class="min-h-screen bg-base-100 text-base-content font-sans">
+<body class="min-h-screen font-sans antialiased text-base-content bg-base-100">
+
+    <!-- Navigation -->
     <div class="navbar bg-base-100/95 backdrop-blur sticky top-0 z-50 px-4 md:px-12 border-b border-white/5">
-        <div class="navbar-start"><a href="index.html" class="text-2xl font-serif font-bold tracking-widest uppercase text-white">Bonnie Lang</a></div>
-        <div class="navbar-end gap-4">
-            <div class="hidden md:flex gap-3 text-xl">
-                <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden" aria-label="Open navigation menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56 text-white uppercase">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shows.html">Shows</a></li>
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="vlog.html">Vlog</a></li>
+                    <li><a href="pics-videos.html" class="nav-active">Pics &amp; Videos</a></li>
+                    <li><a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener">Store</a></li>
+                    <li><a href="contact.html">Contact / Booking</a></li>
+                </ul>
             </div>
-            <a href="index.html" class="btn btn-ghost btn-sm">Back to Home</a>
+            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest uppercase text-white" aria-label="Bonnie Lang Home">Bonnie Lang</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 font-medium tracking-wide text-white uppercase text-xs">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="shows.html">SHOWS</a></li>
+                <li><a href="music.html">MUSIC</a></li>
+                <li><a href="vlog.html">VLOG</a></li>
+                <li><a href="pics-videos.html" class="nav-active">PICS &amp; VIDEOS</a></li>
+                <li><a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener">STORE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end gap-3 text-xl hidden md:flex">
+            <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com/bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
         </div>
     </div>
-    <main class="container mx-auto px-4 py-20">
-        <h1 class="text-5xl font-serif font-bold mb-12 text-center text-white italic">Pics & Videos</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="aspect-square bg-white/5 rounded-2xl overflow-hidden shadow-xl"><img src="images/gallery-1.jpg" alt="Bonnie Lang" class="w-full h-full object-cover"></div>
-            <div class="aspect-square bg-white/5 rounded-2xl overflow-hidden shadow-xl"><img src="images/gallery-2.jpg" alt="RV Life" class="w-full h-full object-cover"></div>
-            <div class="aspect-square bg-white/5 rounded-2xl overflow-hidden shadow-xl"><img src="images/gallery-3.jpg" alt="Performance" class="w-full h-full object-cover"></div>
+
+    <!-- VIDEOS Section -->
+    <section class="py-24 bg-base-100">
+        <div class="container mx-auto px-4 max-w-6xl">
+
+            <!-- Page Title -->
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-serif font-bold mb-4 uppercase text-white">Videos</h1>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+            </div>
+
+            <!-- ── MUSIC VIDEOS ── -->
+            <h2 class="text-2xl font-serif font-bold uppercase mb-8 text-primary border-b border-primary/20 pb-3">Music Videos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-20">
+
+                <!-- Wildfire -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Wildfire — Bonnie Lang"
+                                src="https://www.youtube.com/embed/nvQFa97_bE8?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Wildfire</h3></div>
+                </div>
+
+                <!-- Live While You Can -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Live While You Can — Bonnie Lang"
+                                src="https://www.youtube.com/embed/KdIUK8BDLU4?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Live While You Can</h3></div>
+                </div>
+
+                <!-- Driveway Drinking -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Driveway Drinking — Bonnie Lang"
+                                src="https://www.youtube.com/embed/n51Va0Nq2NE?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Driveway Drinking</h3></div>
+                </div>
+
+                <!-- Let's Drive -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Let's Drive — Bonnie Lang"
+                                src="https://www.youtube.com/embed/DiaAQs1u_vE?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Let's Drive</h3></div>
+                </div>
+
+                <!-- I Wanna Be -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="I Wanna Be — Bonnie Lang"
+                                src="https://www.youtube.com/embed/s7vI2gk_4nY?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">I Wanna Be</h3></div>
+                </div>
+
+                <!-- Without You -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Without You — Bonnie Lang"
+                                src="https://www.youtube.com/embed/1g0SMWP4Cdc?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Without You</h3></div>
+                </div>
+
+                <!-- Life Still Happens -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Life Still Happens — Bonnie Lang"
+                                src="https://www.youtube.com/embed/uKkv6YKnsag?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Life Still Happens</h3></div>
+                </div>
+
+                <!-- Beautiful Destination -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Beautiful Destination — Bonnie Lang"
+                                src="https://www.youtube.com/embed/SlgmAh3I6eI?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Beautiful Destination</h3></div>
+                </div>
+
+                <!-- Oh My My -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Oh My My — Bonnie Lang"
+                                src="https://www.youtube.com/embed/0_mj_9qhIuo?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Oh My My</h3></div>
+                </div>
+
+                <!-- Beach Happy -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Beach Happy — Bonnie Lang"
+                                src="https://www.youtube.com/embed/UTPGiPcs6y4?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Beach Happy</h3></div>
+                </div>
+
+                <!-- Can't Get Over -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Can't Get Over — Bonnie Lang"
+                                src="https://www.youtube.com/embed/yoiWINpUXcc?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Can't Get Over</h3></div>
+                </div>
+
+                <!-- Our Story -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Our Story — Bonnie Lang"
+                                src="https://www.youtube.com/embed/cKPbo3ZTTQo?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Our Story</h3></div>
+                </div>
+
+                <!-- Nothin I Don't Love -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Nothin I Don't Love — Bonnie Lang"
+                                src="https://www.youtube.com/embed/I5zLocM10bg?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Nothin I Don't Love</h3></div>
+                </div>
+
+                <!-- Driveway Drinking Line Dance -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Driveway Drinking Line Dance — Bonnie Lang"
+                                src="https://www.youtube.com/embed/e8Z-bu6zw2c?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Driveway Drinking Line Dance</h3></div>
+                </div>
+
+            </div>
+
+            <!-- ── COMMERCIALS, TV SERIES & MOVIES ── -->
+            <h2 class="text-2xl font-serif font-bold uppercase mb-8 text-primary border-b border-primary/20 pb-3">Commercials, TV Series &amp; Movies</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-20">
+
+                <!-- Kickapoo Lucky Eagle 1 -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Kickapoo Lucky Eagle (1) — Bonnie Lang"
+                                src="https://www.youtube.com/embed/sfKLD8aG9lw?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Kickapoo Lucky Eagle (1)</h3></div>
+                </div>
+
+                <!-- Kickapoo Lucky Eagle 2 -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Kickapoo Lucky Eagle (2) — Bonnie Lang"
+                                src="https://www.youtube.com/embed/Ng6QDUQuCe0?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Kickapoo Lucky Eagle (2)</h3></div>
+                </div>
+
+                <!-- Kickapoo Lucky Eagle 3 -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Kickapoo Lucky Eagle (3) — Bonnie Lang"
+                                src="https://www.youtube.com/embed/pX7CtdDxOaA?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">Kickapoo Lucky Eagle (3)</h3></div>
+                </div>
+
+                <!-- Infiniti / Lawmen: Bass Reeves -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Infiniti / Lawmen: Bass Reeves — Bonnie Lang"
+                                src="https://www.youtube.com/embed/iDtNecK5My8?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-white uppercase">Infiniti / Lawmen: Bass Reeves</h3>
+                        <p class="text-xs opacity-50 mt-1">Commercial &amp; TV</p>
+                    </div>
+                </div>
+
+                <!-- JR's Plumbing -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="JR's Plumbing — Bonnie Lang"
+                                src="https://www.youtube.com/embed/qg1ClE3uFj0?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase">JR's Plumbing</h3></div>
+                </div>
+
+            </div>
+
+            <!-- ── CHRISTMAS VIDEOS ── -->
+            <h2 class="text-2xl font-serif font-bold uppercase mb-8 text-primary border-b border-primary/20 pb-3">Christmas Videos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-24">
+
+                <!-- Christmas Video 1 -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Christmas Video 1 — Bonnie Lang"
+                                src="https://www.youtube.com/embed/FGtI5K4R1AY?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase"><i class="fas fa-snowflake text-primary mr-2" aria-hidden="true"></i>Christmas Video 1</h3></div>
+                </div>
+
+                <!-- Christmas Video 2 -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Christmas Video 2 — Bonnie Lang"
+                                src="https://www.youtube.com/embed/tEjT_QK-_y8?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase"><i class="fas fa-snowflake text-primary mr-2" aria-hidden="true"></i>Christmas Video 2</h3></div>
+                </div>
+
+                <!-- Christmas Video 3 -->
+                <div class="bg-base-200 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="yt-embed-wrap">
+                        <iframe title="Christmas Video 3 — Bonnie Lang"
+                                src="https://www.youtube.com/embed/dEMg6oGKcCY?rel=0"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-5"><h3 class="font-bold text-white uppercase"><i class="fas fa-snowflake text-primary mr-2" aria-hidden="true"></i>Christmas Video 3</h3></div>
+                </div>
+
+            </div>
+
+            <!-- ── PHOTOS ── -->
+            <div class="border-t border-white/10 pt-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-serif font-bold uppercase mb-4 text-white">Photos</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                    <p class="opacity-50 text-sm">Click any photo to enlarge</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                    <a href="images/gallery-01.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Bonnie Lang — Live Performance">
+                        <img src="images/gallery-01.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang live performance" loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center"><i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i></div>
+                    </a>
+                    <a href="images/gallery-02.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Life on the road">
+                        <img src="images/gallery-02.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang — life on the road" loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center"><i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i></div>
+                    </a>
+                    <a href="images/gallery-03.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="On stage in Texas">
+                        <img src="images/gallery-03.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang on stage" loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center"><i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i></div>
+                    </a>
+                    <a href="images/gallery-04.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Bonnie with her guitar">
+                        <img src="images/gallery-04.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang with guitar" loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center"><i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i></div>
+                    </a>
+                    <a href="images/gallery-05.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Official portrait">
+                        <img src="images/gallery-05.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang official portrait" loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center"><i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i></div>
+                    </a>
+                    <a href="images/gallery-06.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Luckenbach performance">
+                        <img src="images/gallery-06.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang at Luckenbach" loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center"><i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i></div>
+                    </a>
+                    <a href="images/gallery-07.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Outdoor inspiration">
+                        <img src="images/gallery-07.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang outdoors" loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center"><i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i></div>
+                    </a>
+                    <a href="images/gallery-08.jpg" class="glightbox aspect-square overflow-hidden rounded-xl group relative block" data-gallery="bonnie-gallery" data-description="Live performance energy">
+                        <img src="images/gallery-08.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Bonnie Lang live energy" loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center"><i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl" aria-hidden="true"></i></div>
+                    </a>
+                </div>
+            </div>
+
         </div>
-    </main>
+    </section>
+
+    <!-- Footer -->
+        <!-- Mailchimp Signup -->
+    <section class="py-12" style="background-color:rgba(20,14,8,0.87);">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h3 class="text-2xl font-serif font-bold mb-2 uppercase tracking-wider">Stay in the Loop</h3>
+            <p class="opacity-70 mb-6">Get show dates, new music, and stories from the road.</p>
+            <form action="https://BonnieLang.us14.list-manage.com/subscribe/post?u=f2154d14bd0a787ab38611b49&amp;id=d6afac6bda&amp;f_id=00349fe0f0" method="post" target="_blank" class="flex flex-col gap-3 justify-center relative">
+                <input type="text" name="FNAME" placeholder="Your First Name" class="input input-bordered flex-1 max-w-sm bg-white/10 text-white placeholder-white/50 border-white/20 focus:border-primary" aria-label="First name" required>
+                <input type="email" name="EMAIL" placeholder="Your Email Address"
+                       class="input input-bordered flex-1 max-w-sm bg-white/10 text-white placeholder-white/50 border-white/20 focus:border-primary"
+                       aria-label="Email address for mailing list" required>
+                <!-- Mailchimp anti-bot honeypot — do not remove -->
+                <div style="position:absolute;left:-5000px;" aria-hidden="true">
+                    <input type="text" name="b_f2154d14bd0a787ab38611b49_d6afac6bda" tabindex="-1" value="">
+                </div>
+                <button type="submit" class="btn btn-primary px-8 uppercase tracking-wider">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
     <footer class="footer footer-center p-10 bg-neutral text-neutral-content border-t border-primary/20">
-        <nav><div class="grid grid-flow-col gap-6 text-3xl">
-            <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.tiktok.com/@bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
-        </div></nav>
-        <p class="opacity-40 text-xs mt-4">&copy; 2026 Bonnie Lang. All Rights Reserved.</p>
+        <aside>
+            <p class="text-4xl font-serif font-bold uppercase tracking-tighter text-white">Bonnie Lang</p>
+            <p class="opacity-70">Peace, Love, Happiness &amp; Big Ol' Hugs.</p>
+            <a href="mailto:Bonnie@BonnieLang.com" class="link link-hover text-primary mt-1">Bonnie@BonnieLang.com</a>
+        </aside>
+        <nav>
+            <div class="grid grid-flow-col gap-6 text-3xl">
+                <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://youtube.com/playlist?list=PLfaWeh3qSWE511wnqahRnjW14eqGpyJIE" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </nav>
+        <p class="opacity-40 text-xs">&copy; 2026 Bonnie Lang. All Rights Reserved.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true, openEffect: 'fade', closeEffect: 'fade' });
+    </script>
 </body>
 </html>
