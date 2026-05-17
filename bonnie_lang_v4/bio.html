@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio | Bonnie Lang</title>
+    <meta name="description" content="Official bio of Bonnie Lang — Texas singer-songwriter and actress featured in Paramount+'s 1923 and Lawmen: Bass Reeves.">
+    <meta property="og:title" content="Bio | Bonnie Lang">
+    <meta property="og:description" content="Texas-born singer-songwriter, storyteller, and road-loving dreamer. Actress in Lawmen: Bass Reeves and 1923 on Paramount+.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -11,9 +18,8 @@
         .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
     </style>
 </head>
-<body class="min-h-screen bg-base-100 text-base-content font-sans">
+<body class="min-h-screen font-sans antialiased text-base-content bg-base-100">
 
-    <!-- Navigation -->
     <!-- Navigation -->
     <div class="navbar bg-base-100/95 backdrop-blur sticky top-0 z-50 px-4 md:px-12 border-b border-white/5">
         <div class="navbar-start">
@@ -21,14 +27,15 @@
                 <label tabindex="0" class="btn btn-ghost lg:hidden" aria-label="Open navigation menu">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56 text-white uppercase">
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-white uppercase">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="shows.html">Shows</a></li>
+                    <li><a href="bio.html" class="nav-active">Bio</a></li>
+                    <li><a href="story.html">Story</a></li>
                     <li><a href="music.html">Music</a></li>
-                    <li><a href="vlog.html">Vlog</a></li>
-                    <li><a href="pics-videos.html">Pics &amp; Videos</a></li>
-                    <li><a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener">Store</a></li>
-                    <li><a href="contact.html">Contact / Booking</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener">Shop</a></li>
                 </ul>
             </div>
             <a href="index.html" class="text-2xl font-serif font-bold tracking-widest uppercase text-white" aria-label="Bonnie Lang Home">Bonnie Lang</a>
@@ -44,42 +51,90 @@
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </div>
-        <div class="navbar-end gap-3 text-xl hidden md:flex">
-                            <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Follow Bonnie Lang on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://www.tiktok.com/@bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Follow Bonnie Lang on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-                <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Watch Bonnie Lang on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Follow Bonnie Lang on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <div class="navbar-end">
+            <a href="https://open.spotify.com/artist/3xeUqtFaxcoSax3U1910Cu" target="_blank" rel="noopener" class="btn btn-primary btn-outline btn-sm hidden md:flex" aria-label="Listen to Bonnie Lang on Spotify">Listen Now</a>
         </div>
     </div>
-        <div class="navbar-end gap-4">
-            <div class="hidden md:flex gap-3 text-xl">
-                <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+
+    <!-- Bio Content -->
+    <section class="py-24 bg-base-200 min-h-[60vh]">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-serif font-bold mb-4 uppercase">Hi — I'm Bonnie Lang</h1>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
             </div>
-            <a href="index.html" class="btn btn-ghost btn-sm">Back to Home</a>
-        </div>
-    </div>
 
-    <main class="container mx-auto px-4 py-20 max-w-4xl">
-        <h1 class="text-5xl font-serif font-bold mb-8 text-center text-white italic">Bio</h1>
-        <div class="prose prose-lg max-w-none text-white/80 leading-relaxed">
-            <p>Texas-born singer-songwriter Bonnie Lang is more than just a musician; she's a storyteller on wheels. After facing life-altering challenges, she decided to stop waiting for "someday" and start living now. Today, she travels America full-time in her RV, playing shows from coast to coast and sharing her journey through music and her vlog, Wheels and Warbles.</p>
-            <p>With a voice that blends country roots with soulful authenticity, Bonnie's music resonates with anyone who has ever had to find their spark again. Her anthem, "Wildfire," serves as a reminder that no matter how long the embers have been cooling, the fire never truly went out.</p>
-        </div>
-    </main>
+            <!-- Two-column layout: text left, photo right -->
+            <div class="flex flex-col lg:flex-row gap-16 items-start">
+                <!-- Text Column -->
+                <div class="flex-1 prose prose-lg max-w-none opacity-90 space-y-8 leading-relaxed">
+                    <p>
+                        I'm a Texas-born singer-songwriter, storyteller, and road-loving dreamer with a guitar in my hands and a fire that refuses to fade. You may have seen me on stage, in national commercials, or appearing in Taylor Sheridan's <em>Lawmen: Bass Reeves</em> and Season 2 of <em>1923</em> on Paramount+.
+                    </p>
+                    <p>
+                        But at my core, I'm simply a songwriter chasing truth, melody, and meaning—one song, one mile at a time. Inspired by artists like Stevie Nicks, I have spent years following music wherever it leads, performing across Texas, Colorado, California, and beyond.
+                    </p>
+                    <h3 class="text-3xl font-serif text-primary italic pt-4 uppercase">Texas Stages &amp; Living Legends</h3>
+                    <p>
+                        Over the years, I've shared stages with Texas greats including The Bellamy Brothers, Mark Chesnutt, Kevin Fowler, and more—playing everywhere from Luckenbach to county fairs, rodeos, and beloved hometown venues. Each stage holds a story, each crowd a connection.
+                    </p>
 
-    <footer class="footer footer-center p-10 bg-neutral text-neutral-content border-t border-primary/20">
+                    <!-- Press Kit CTA -->
+                    <div class="flex flex-wrap gap-4 pt-4 not-prose">
+                        <a href="music.html" class="btn btn-primary px-8">Hear the Music</a>
+                        <a href="story.html" class="btn btn-outline text-white px-8">My Story</a>
+                    </div>
+
+                    <!-- Streaming Links -->
+                    <div class="not-prose pt-6">
+                        <p class="text-sm uppercase tracking-widest text-primary mb-4">Stream On</p>
+                        <div class="flex flex-wrap gap-4 text-2xl">
+                            <a href="https://open.spotify.com/artist/3xeUqtFaxcoSax3U1910Cu" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Listen on Spotify"><i class="fab fa-spotify" aria-hidden="true"></i></a>
+                            <a href="https://music.apple.com/us/artist/bonnie-lang/468439057" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Listen on Apple Music"><i class="fab fa-apple" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/@BonnieLangMusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Watch on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo Column -->
+                <div class="w-full lg:w-[420px] flex-shrink-0">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+                        <img src="images/bonnie-portrait.jpg"
+                             alt="Bonnie Lang — Texas singer-songwriter and performer"
+                             class="w-full h-full object-cover"
+                             loading="lazy">
+                    </div>
+                    <!-- Notoriety badges -->
+                    <div class="mt-6 flex flex-wrap gap-3 justify-center">
+                        <span class="badge badge-primary badge-lg py-3 px-4 font-semibold">Lawmen: Bass Reeves</span>
+                        <span class="badge badge-outline badge-lg py-3 px-4 font-semibold">1923 — Paramount+</span>
+                        <span class="badge badge-outline badge-lg py-3 px-4 font-semibold">Luckenbach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content border-t border-primary/20">
+        <aside>
+            <p class="text-4xl font-serif font-bold uppercase tracking-tighter text-white">Bonnie Lang</p>
+            <p class="opacity-70">Peace, Love, Happiness &amp; Big Ol' Hugs.</p>
+        </aside>
         <nav>
+            <h6 class="footer-title text-primary uppercase">Connect</h6>
             <div class="grid grid-flow-col gap-6 text-3xl">
-                <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/@bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
             </div>
         </nav>
-        <p class="opacity-40 text-xs mt-4">&copy; 2026 Bonnie Lang. All Rights Reserved.</p>
+        <nav>
+            <h6 class="footer-title text-primary uppercase">Shop</h6>
+            <a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener" class="link link-hover text-lg">Official Merch Shop</a>
+        </nav>
     </footer>
+
 </body>
 </html>
