@@ -4,278 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music | Bonnie Lang</title>
-    <meta name="description" content="Stream the music of Bonnie Lang on Apple Music, Amazon Music, and YouTube Music. Including the hit singles Wildfire and Live While You Can.">
-    <meta property="og:title" content="Music | Bonnie Lang">
-    <meta property="og:description" content="Stream Wildfire and Live While You Can — available on Apple Music, Amazon / Alexa, and YouTube Music.">
-    <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:type" content="music.musician">
-    <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
-                /* === Background Texture === */
-        html {
-            background-image: url('images/bg-texture.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center center;
-            background-repeat: no-repeat;
-            min-height: 100%;
-        }
-        body { background: transparent !important; }
-        /* Semi-transparent sections — :not(body) ensures body itself stays transparent */
-        .bg-base-100:not(body) { background-color: rgba(15, 10, 5, 0.87) !important; }
-        .bg-base-200:not(body) { background-color: rgba(20, 14, 8, 0.87) !important; }
-        .bg-base-300:not(body) { background-color: rgba(28, 18, 10, 0.87) !important; }
-        nav.bg-base-100, footer.bg-base-100 { background-color: rgba(15, 10, 5, 0.95) !important; }
         .yt-embed-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; }
         .yt-embed-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1rem; }
     </style>
 </head>
-<body class="min-h-screen font-sans antialiased text-base-content bg-base-100">
-
-    <!-- Navigation -->
+<body class="min-h-screen bg-base-100 text-base-content font-sans">
     <div class="navbar bg-base-100/95 backdrop-blur sticky top-0 z-50 px-4 md:px-12 border-b border-white/5">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <label tabindex="0" class="btn btn-ghost lg:hidden" aria-label="Open navigation menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56 text-white uppercase">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shows.html">Shows</a></li>
-                    <li><a href="music.html" class="nav-active">Music</a></li>
-                    <li><a href="vlog.html">Vlog</a></li>
-                    <li><a href="pics-videos.html">Pics &amp; Videos</a></li>
-                    <li><a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener">Store</a></li>
-                    <li><a href="contact.html">Contact / Booking</a></li>
-                </ul>
+        <div class="navbar-start"><a href="index.html" class="text-2xl font-serif font-bold tracking-widest uppercase text-white">Bonnie Lang</a></div>
+        <div class="navbar-end gap-4">
+            <div class="hidden md:flex gap-3 text-xl">
+                <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
             </div>
-            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest uppercase text-white" aria-label="Bonnie Lang Home">Bonnie Lang</a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 font-medium tracking-wide text-white uppercase text-xs">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="shows.html">SHOWS</a></li>
-                <li><a href="music.html" class="nav-active">MUSIC</a></li>
-                <li><a href="vlog.html">VLOG</a></li>
-                <li><a href="pics-videos.html">PICS &amp; VIDEOS</a></li>
-                <li><a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener">STORE</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </div>
-        <div class="navbar-end gap-3 text-xl hidden md:flex">
-            <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-            <a href="https://www.tiktok.com/bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="index.html" class="btn btn-ghost btn-sm">Back to Home</a>
         </div>
     </div>
-
-    <!-- Music Page -->
-    <section class="py-24 bg-base-100">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="text-center mb-16">
-                <h1 class="text-5xl font-serif font-bold mb-4 uppercase text-white">Stream My Music</h1>
-                <div class="w-24 h-1 bg-primary mx-auto mb-10"></div>
-                <!-- Platform Links -->
-                <div class="flex flex-wrap justify-center gap-5">
-                    <a href="https://music.apple.com/us/artist/bonnie-lang/468439057" target="_blank" rel="noopener"
-                       class="btn btn-lg btn-outline text-white gap-3 hover:btn-primary"
-                       aria-label="Stream on Apple Music">
-                        <i class="fab fa-apple text-2xl" aria-hidden="true"></i>
-                        <span>Apple Music</span>
-                    </a>
-                    <a href="https://amazon.com/music/player/artists/B005Q6E4KU/bonnie-lang?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_GqK67waoBGpxWGNjarSBDd5pL"
-                       target="_blank" rel="noopener"
-                       class="btn btn-lg btn-outline text-white gap-3 hover:btn-primary"
-                       aria-label="Listen on Amazon Music / Alexa">
-                        <i class="fab fa-amazon text-2xl" aria-hidden="true"></i>
-                        <span>Amazon / Alexa</span>
-                    </a>
-                    <a href="https://music.youtube.com/@bonnielangmusic?si=9pDawj3ZTqaTuUy8"
-                       target="_blank" rel="noopener"
-                       class="btn btn-lg btn-outline text-white gap-3 hover:btn-primary"
-                       aria-label="Listen on YouTube Music">
-                        <i class="fab fa-youtube text-2xl" aria-hidden="true"></i>
-                        <span>YouTube Music</span>
-                    </a>
+    <main class="container mx-auto px-4 py-20 max-w-5xl">
+        <h1 class="text-5xl font-serif font-bold mb-12 text-center text-white italic">Music</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+                <h2 class="text-3xl font-serif font-bold mb-4 text-white">Wildfire</h2>
+                <p class="text-lg opacity-80 mb-6">The official anthem for the survivors, the dreamers, and those ready to rise again. Stream it on all platforms.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://music.apple.com/us/artist/bonnie-lang/468439057" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Apple Music</a>
+                    <a href="https://music.youtube.com/@bonnielangmusic" target="_blank" rel="noopener" class="btn btn-outline btn-sm">YouTube Music</a>
                 </div>
             </div>
-
-            <!-- Wildfire -->
-            <div class="flex flex-col lg:flex-row gap-14 items-center mb-32">
-                <div class="flex-1 text-center lg:text-left order-2 lg:order-1">
-                    <h4 class="text-primary tracking-widest uppercase text-sm mb-3 font-semibold">Official Music Video</h4>
-                    <h2 class="text-5xl font-serif font-bold mb-5 text-white">Wildfire</h2>
-                    <p class="text-lg leading-relaxed mb-8 opacity-80">
-                        Wildfire is my anthem song and it's for anyone who's ever felt stuck, lost, or forgotten their spark. It's a reminder that your fire never went out — it's just waiting for you to rise and let it burn again.
-                    </p>
-                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                        <a href="https://youtu.be/nvQFa97_bE8?si=mE4NhAsyEfUc7HwS" target="_blank" rel="noopener" class="btn btn-primary gap-2" aria-label="Watch Wildfire on YouTube">
-                            <i class="fab fa-youtube" aria-hidden="true"></i> Watch on YouTube
-                        </a>
-                        <a href="https://music.apple.com/us/artist/bonnie-lang/468439057" target="_blank" rel="noopener" class="btn btn-outline text-white gap-2" aria-label="Listen to Wildfire on Apple Music">
-                            <i class="fab fa-apple" aria-hidden="true"></i> Apple Music
-                        </a>
-                    </div>
-                </div>
-                <div class="flex-1 w-full max-w-xl order-1 lg:order-2">
-                    <div class="yt-embed-wrap shadow-2xl">
-                        <iframe title="Bonnie Lang — Wildfire (Official Music Video)"
-                                src="https://www.youtube.com/embed/nvQFa97_bE8?rel=0"
-                                frameborder="0"
-                                allow="autoplay; fullscreen; picture-in-picture"
-                                allowfullscreen loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="mb-32 border-white/10">
-
-            <!-- Live While You Can -->
-            <div class="flex flex-col lg:flex-row-reverse gap-14 items-center mb-32">
-                <div class="flex-1 text-center lg:text-left">
-                    <h4 class="text-primary tracking-widest uppercase text-sm mb-3 font-semibold">Latest Single</h4>
-                    <h2 class="text-5xl font-serif font-bold mb-5 text-white">Live While You Can</h2>
-                    <p class="text-lg leading-relaxed mb-8 opacity-80">
-                        Life is short, and that's the heartbeat of this song. It's a reminder to stop waiting for "someday" and start chasing the moments that matter now.
-                    </p>
-                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                        <a href="https://youtu.be/KdIUK8BDLU4?si=eSBoMfrdGoICIyuT" target="_blank" rel="noopener" class="btn btn-primary gap-2" aria-label="Watch Live While You Can on YouTube">
-                            <i class="fab fa-youtube" aria-hidden="true"></i> Watch on YouTube
-                        </a>
-                        <a href="https://music.apple.com/us/artist/bonnie-lang/468439057" target="_blank" rel="noopener" class="btn btn-outline text-white gap-2" aria-label="Listen on Apple Music">
-                            <i class="fab fa-apple" aria-hidden="true"></i> Apple Music
-                        </a>
-                    </div>
-                </div>
-                <div class="flex-1 w-full max-w-xl">
-                    <div class="yt-embed-wrap shadow-2xl">
-                        <iframe title="Bonnie Lang — Live While You Can"
-                                src="https://www.youtube.com/embed/KdIUK8BDLU4?rel=0"
-                                frameborder="0"
-                                allow="autoplay; fullscreen; picture-in-picture"
-                                allowfullscreen loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="mb-32 border-white/10">
-
-            <!-- More Songs Grid -->
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-serif font-bold uppercase mb-4">More Songs</h2>
-                <div class="w-24 h-1 bg-primary mx-auto"></div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Each card links directly to the real YouTube video -->
-                <a href="https://youtu.be/n51Va0Nq2NE?si=Ww1bzozYkQf41FLM" target="_blank" rel="noopener"
-                   class="group bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform block">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://img.youtube.com/vi/n51Va0Nq2NE/mqdefault.jpg" alt="Driveway Drinking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-white uppercase">Driveway Drinking</h3>
-                        <p class="text-primary text-sm mt-1 flex items-center gap-1"><i class="fab fa-youtube" aria-hidden="true"></i> Watch on YouTube</p>
-                    </div>
-                </a>
-                <a href="https://youtu.be/DiaAQs1u_vE?si=w_shuSwpGyxfWR94" target="_blank" rel="noopener"
-                   class="group bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform block">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://img.youtube.com/vi/DiaAQs1u_vE/mqdefault.jpg" alt="Let's Drive" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-white uppercase">Let's Drive</h3>
-                        <p class="text-primary text-sm mt-1 flex items-center gap-1"><i class="fab fa-youtube" aria-hidden="true"></i> Watch on YouTube</p>
-                    </div>
-                </a>
-                <a href="https://youtu.be/s7vI2gk_4nY?si=8W4Zh1nECltb_fO0" target="_blank" rel="noopener"
-                   class="group bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform block">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://img.youtube.com/vi/s7vI2gk_4nY/mqdefault.jpg" alt="I Wanna Be" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-white uppercase">I Wanna Be</h3>
-                        <p class="text-primary text-sm mt-1 flex items-center gap-1"><i class="fab fa-youtube" aria-hidden="true"></i> Watch on YouTube</p>
-                    </div>
-                </a>
-                <a href="https://youtu.be/1g0SMWP4Cdc?si=jBbKIYoRbP4ju0r2" target="_blank" rel="noopener"
-                   class="group bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform block">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://img.youtube.com/vi/1g0SMWP4Cdc/mqdefault.jpg" alt="Without You" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-white uppercase">Without You</h3>
-                        <p class="text-primary text-sm mt-1 flex items-center gap-1"><i class="fab fa-youtube" aria-hidden="true"></i> Watch on YouTube</p>
-                    </div>
-                </a>
-                <a href="https://youtu.be/uKkv6YKnsag?si=nU-_D70o_1BIFh2M" target="_blank" rel="noopener"
-                   class="group bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform block">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://img.youtube.com/vi/uKkv6YKnsag/mqdefault.jpg" alt="Life Still Happens" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-white uppercase">Life Still Happens</h3>
-                        <p class="text-primary text-sm mt-1 flex items-center gap-1"><i class="fab fa-youtube" aria-hidden="true"></i> Watch on YouTube</p>
-                    </div>
-                </a>
-                <a href="https://youtu.be/SlgmAh3I6eI?si=kHy9Ny5SHPl77ep6" target="_blank" rel="noopener"
-                   class="group bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform block">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://img.youtube.com/vi/SlgmAh3I6eI/mqdefault.jpg" alt="Beautiful Destination" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-white uppercase">Beautiful Destination</h3>
-                        <p class="text-primary text-sm mt-1 flex items-center gap-1"><i class="fab fa-youtube" aria-hidden="true"></i> Watch on YouTube</p>
-                    </div>
-                </a>
-            </div>
-            <div class="text-center mt-10">
-                <a href="https://youtube.com/playlist?list=PLfaWeh3qSWE511wnqahRnjW14eqGpyJIE" target="_blank" rel="noopener" class="btn btn-outline text-primary border-primary gap-2">
-                    <i class="fab fa-youtube" aria-hidden="true"></i> See Full YouTube Playlist
-                </a>
+            <div class="yt-embed-wrap shadow-2xl">
+                <iframe src="https://www.youtube.com/embed/nvQFa97_bE8" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-        <!-- Mailchimp Signup -->
-    <section class="py-12" style="background-color:rgba(20,14,8,0.87);">
-        <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h3 class="text-2xl font-serif font-bold mb-2 uppercase tracking-wider">Stay in the Loop</h3>
-            <p class="opacity-70 mb-6">Get show dates, new music, and stories from the road.</p>
-            <form action="https://BonnieLang.us14.list-manage.com/subscribe/post?u=f2154d14bd0a787ab38611b49&amp;id=d6afac6bda&amp;f_id=00349fe0f0" method="post" target="_blank" class="flex flex-col gap-3 justify-center relative">
-                <input type="text" name="FNAME" placeholder="Your First Name" class="input input-bordered flex-1 max-w-sm bg-white/10 text-white placeholder-white/50 border-white/20 focus:border-primary" aria-label="First name" required>
-                <input type="email" name="EMAIL" placeholder="Your Email Address"
-                       class="input input-bordered flex-1 max-w-sm bg-white/10 text-white placeholder-white/50 border-white/20 focus:border-primary"
-                       aria-label="Email address for mailing list" required>
-                <!-- Mailchimp anti-bot honeypot — do not remove -->
-                <div style="position:absolute;left:-5000px;" aria-hidden="true">
-                    <input type="text" name="b_f2154d14bd0a787ab38611b49_d6afac6bda" tabindex="-1" value="">
-                </div>
-                <button type="submit" class="btn btn-primary px-8 uppercase tracking-wider">Sign Up</button>
-            </form>
+        <div class="text-center">
+            <h3 class="text-2xl font-serif font-bold mb-6 text-white uppercase">Follow on Streaming</h3>
+            <div class="flex justify-center gap-8 text-4xl">
+                <a href="https://music.apple.com/us/artist/bonnie-lang/468439057" target="_blank" rel="noopener" class="hover:text-primary"><i class="fab fa-apple"></i></a>
+                <a href="https://amazon.com/music/player/artists/B005Q6E4KU/bonnie-lang" target="_blank" rel="noopener" class="hover:text-primary"><i class="fab fa-amazon"></i></a>
+                <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
-    </section>
-
+    </main>
     <footer class="footer footer-center p-10 bg-neutral text-neutral-content border-t border-primary/20">
-        <aside>
-            <p class="text-4xl font-serif font-bold uppercase tracking-tighter text-white">Bonnie Lang</p>
-            <p class="opacity-70">Peace, Love, Happiness &amp; Big Ol' Hugs.</p>
-            <a href="mailto:Bonnie@BonnieLang.com" class="link link-hover text-primary mt-1">Bonnie@BonnieLang.com</a>
-        </aside>
-        <nav>
-            <div class="grid grid-flow-col gap-6 text-3xl">
-                <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://www.tiktok.com/bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-                <a href="https://youtube.com/playlist?list=PLfaWeh3qSWE511wnqahRnjW14eqGpyJIE" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            </div>
-        </nav>
-        <p class="opacity-40 text-xs">&copy; 2026 Bonnie Lang. All Rights Reserved.</p>
+        <nav><div class="grid grid-flow-col gap-6 text-3xl">
+            <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+        </div></nav>
+        <p class="opacity-40 text-xs mt-4">&copy; 2026 Bonnie Lang. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>

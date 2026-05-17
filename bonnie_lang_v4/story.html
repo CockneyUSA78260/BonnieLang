@@ -3,141 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Story | Bonnie Lang</title>
-    <meta name="description" content="Music with meaning — the personal stories behind Bonnie Lang's songs, including her childhood battle with cancer and surviving cardiac arrest in 2024.">
-    <meta property="og:title" content="Story | Bonnie Lang">
-    <meta property="og:description" content="Teddy. The Miracle. Two stories of survival that shaped Bonnie Lang's music with meaning.">
-    <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>My Story | Bonnie Lang</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
-    </style>
 </head>
-<body class="min-h-screen font-sans antialiased text-base-content bg-base-100">
-
-    <!-- Navigation -->
+<body class="min-h-screen bg-base-100 text-base-content font-sans">
     <div class="navbar bg-base-100/95 backdrop-blur sticky top-0 z-50 px-4 md:px-12 border-b border-white/5">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <label tabindex="0" class="btn btn-ghost lg:hidden" aria-label="Open navigation menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-white uppercase">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="bio.html">Bio</a></li>
-                    <li><a href="story.html" class="nav-active">Story</a></li>
-                    <li><a href="music.html">Music</a></li>
-                    <li><a href="photos.html">Photos</a></li>
-                    <li><a href="videos.html">Videos</a></li>
-                    <li><a href="podcast.html">Podcast</a></li>
-                    <li><a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener">Shop</a></li>
-                </ul>
+        <div class="navbar-start"><a href="index.html" class="text-2xl font-serif font-bold tracking-widest uppercase text-white">Bonnie Lang</a></div>
+        <div class="navbar-end gap-4">
+            <div class="hidden md:flex gap-3 text-xl">
+                <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
             </div>
-            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest uppercase text-white" aria-label="Bonnie Lang Home">Bonnie Lang</a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 font-medium tracking-wide text-white uppercase text-xs">
-                <li><a href="bio.html">BIO</a></li>
-                <li><a href="story.html" class="nav-active">STORY</a></li>
-                <li><a href="music.html">MUSIC</a></li>
-                <li><a href="photos.html">PHOTOS</a></li>
-                <li><a href="videos.html">VIDEOS</a></li>
-                <li><a href="podcast.html">PODCAST</a></li>
-                <li><a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener">SHOP</a></li>
-            </ul>
-        </div>
-        <div class="navbar-end">
-            <a href="https://open.spotify.com/artist/3xeUqtFaxcoSax3U1910Cu" target="_blank" rel="noopener" class="btn btn-primary btn-outline btn-sm hidden md:flex" aria-label="Listen to Bonnie Lang on Spotify">Listen Now</a>
+            <a href="index.html" class="btn btn-ghost btn-sm">Back to Home</a>
         </div>
     </div>
-
-    <!-- Story Content -->
-    <section class="py-24 bg-base-100">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="text-center mb-16">
-                <h1 class="text-4xl font-serif font-bold mb-4 uppercase text-white">Music With Meaning</h1>
-                <div class="w-24 h-1 bg-primary mx-auto"></div>
-                <p class="mt-6 text-lg opacity-70 max-w-2xl mx-auto">Two stories of survival. Two songs born from the deepest places. This is why the music exists.</p>
-            </div>
-
-            <!-- Teddy -->
-            <div class="card lg:card-side bg-base-200 shadow-xl mb-20 overflow-hidden">
-                <figure class="lg:w-2/5 overflow-hidden">
-                    <img src="images/story-teddy.jpg"
-                         alt="Bonnie Lang as a child — the inspiration behind the song Teddy"
-                         class="w-full h-full object-cover min-h-[280px]"
-                         loading="lazy">
-                </figure>
-                <div class="card-body lg:w-3/5">
-                    <h2 class="card-title text-3xl font-serif mb-4 text-white uppercase italic">"Teddy" — A Childhood Battle</h2>
-                    <p class="text-lg opacity-90 leading-relaxed">
-                        When I was a child, I fought a battle with cancer that changed my perspective on life forever. "Teddy" is the story of that resilience—a song written for the little version of me who refused to give up, and for anyone currently in the fight of their lives.
-                    </p>
-                    <div class="card-actions justify-end mt-6 flex-wrap gap-4">
-                        <a href="music.html" class="btn btn-primary">Hear the Song</a>
-                        <a href="photos.html" class="btn btn-outline text-white">See Photos</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- The Miracle -->
-            <div class="card lg:card-side bg-base-200 shadow-xl overflow-hidden border border-primary/20">
-                <figure class="lg:w-2/5 overflow-hidden order-first lg:order-last">
-                    <img src="images/story-miracle.jpg"
-                         alt="Bonnie Lang today — survivor of sudden cardiac arrest December 2024"
-                         class="w-full h-full object-cover min-h-[280px]"
-                         loading="lazy">
-                </figure>
-                <div class="card-body lg:w-3/5">
-                    <h2 class="card-title text-3xl font-serif mb-4 text-white uppercase italic">The Miracle (Dec 2024)</h2>
-                    <p class="text-lg opacity-90 leading-relaxed">
-                        On December 14, 2024, my life stopped. I experienced a sudden cardiac arrest and was clinically gone for several minutes. Against all odds, I am here today to tell the story. This "miracle" has deepened my mission to live out loud and encourage others to chase their dreams while they still can.
-                    </p>
-                    <div class="card-actions justify-end mt-6 flex-wrap gap-4">
-                        <a href="music.html" class="btn btn-primary">Live While You Can</a>
-                        <a href="https://www.facebook.com/BonnieLangMusic/" target="_blank" rel="noopener" class="btn btn-outline text-white">Follow on Facebook</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quote / Pull -->
-            <div class="text-center mt-24 py-16 border-t border-white/10">
-                <blockquote class="text-3xl font-serif italic text-primary max-w-3xl mx-auto leading-relaxed">
-                    "The fire never went out. It was just waiting to burn again."
-                </blockquote>
-                <p class="mt-6 opacity-60 uppercase tracking-widest text-sm">— Bonnie Lang</p>
-                <div class="mt-10">
-                    <a href="music.html" class="btn btn-primary btn-lg px-12">Listen to the Music</a>
-                </div>
-            </div>
+    <main class="container mx-auto px-4 py-20 max-w-4xl">
+        <h1 class="text-5xl font-serif font-bold mb-8 text-center text-white italic">My Story</h1>
+        <div class="prose prose-lg max-w-none text-white/80 leading-relaxed">
+            <p>Every song comes from somewhere. For me, they come from the road, from survival, and from a deep belief that it's never too late to start over. After overcoming significant health and personal hurdles, I realized that life isn't meant to be lived in one place. It's meant to be an adventure.</p>
+            <p>Selling my home and moving into an RV wasn't just about travel; it was about freedom. Freedom to play music where I want, meet people from all walks of life, and share the message that you should live while you can.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer p-10 bg-neutral text-neutral-content border-t border-primary/20">
-        <aside>
-            <p class="text-4xl font-serif font-bold uppercase tracking-tighter text-white">Bonnie Lang</p>
-            <p class="opacity-70">Peace, Love, Happiness &amp; Big Ol' Hugs.</p>
-        </aside>
-        <nav>
-            <h6 class="footer-title text-primary uppercase">Connect</h6>
-            <div class="grid grid-flow-col gap-6 text-3xl">
-                <a href="https://www.instagram.com/bonnielangmusic/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Follow Bonnie Lang on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://www.youtube.com/@BonnieLangMusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Subscribe on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                <a href="https://open.spotify.com/artist/3xeUqtFaxcoSax3U1910Cu" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Listen on Spotify"><i class="fab fa-spotify" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/BonnieLangMusic/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" aria-label="Follow on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-            </div>
-        </nav>
-        <nav>
-            <h6 class="footer-title text-primary uppercase">Shop</h6>
-            <a href="https://bonnielang.bigcartel.com/" target="_blank" rel="noopener" class="link link-hover text-lg">Official Merch Shop</a>
-        </nav>
+    </main>
+    <footer class="footer footer-center p-10 bg-neutral text-neutral-content border-t border-primary/20">
+        <nav><div class="grid grid-flow-col gap-6 text-3xl">
+            <a href="https://www.facebook.com/BonnieLangBand/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@bonnielangmusic" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@BonnieLangMusic?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/bonnielang/" target="_blank" rel="noopener" class="hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+        </div></nav>
+        <p class="opacity-40 text-xs mt-4">&copy; 2026 Bonnie Lang. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
