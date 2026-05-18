@@ -103,7 +103,14 @@
                             <span>Oops! Something went wrong. Please try again or email <a href="mailto:Bonnie@BonnieLang.com" class="underline">Bonnie@BonnieLang.com</a> directly.</span>
                         </div>
 
-                        <form id="contact-form" class="space-y-6">
+                        <!-- Formspree success / error banners -->
+                        <div data-fs-success class="hidden alert alert-success mb-4 text-white font-semibold">
+                            <i class="fas fa-check-circle mr-2"></i> Message sent! Bonnie will be in touch soon. 🎶
+                        </div>
+                        <div data-fs-error class="hidden alert alert-error mb-4 text-white font-semibold">
+                            <i class="fas fa-exclamation-circle mr-2"></i> Something went wrong. Please email <a href="mailto:Bonnie@BonnieLang.com" class="underline">Bonnie@BonnieLang.com</a> directly.
+                        </div>
+                        <form id="contact-form" action="https://formspree.io/f/xojbqdbl" method="POST" class="space-y-6">
                             <div class="form-control">
                                 <label class="label" for="contact-name">
                                     <span class="label-text uppercase tracking-wider text-sm">Contact Name <span class="text-primary">*</span></span>
