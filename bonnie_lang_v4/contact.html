@@ -14,21 +14,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* === Background Texture === */
+        /* === Background Gradient === */
         html {
-            background-image: url('images/bg-texture.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center center;
-            background-repeat: no-repeat;
+            background: linear-gradient(160deg, #8b4513 0%, #5c2d0e 35%, #7a3b16 65%, #4a1f0a 100%);
             min-height: 100%;
         }
         body { background: transparent !important; }
-        /* Semi-transparent sections — :not(body) ensures body itself stays transparent */
-        .bg-base-100:not(body) { background-color: rgba(15, 10, 5, 0.87) !important; }
-        .bg-base-200:not(body) { background-color: rgba(20, 14, 8, 0.87) !important; }
-        .bg-base-300:not(body) { background-color: rgba(28, 18, 10, 0.87) !important; }
-        nav.bg-base-100, footer.bg-base-100 { background-color: rgba(15, 10, 5, 0.95) !important; }
+        /* Lower opacity so gradient shows through clearly */
+        .bg-base-100:not(body) { background-color: rgba(10, 5, 2, 0.50) !important; }
+        .bg-base-200:not(body) { background-color: rgba(15, 8, 3, 0.50) !important; }
+        .bg-base-300:not(body) { background-color: rgba(20, 10, 4, 0.50) !important; }
+        nav.bg-base-100, footer.bg-base-100 { background-color: rgba(10, 5, 2, 0.82) !important; }
 
         .nav-active { color: hsl(var(--p)) !important; font-weight: 700; }
     </style>
@@ -101,7 +97,7 @@
                                 <label class="label" for="contact-name">
                                     <span class="label-text uppercase tracking-wider text-sm">Contact Name <span class="text-primary">*</span></span>
                                 </label>
-                                <input id="contact-name" type="text" placeholder="Your name" class="input input-bordered w-full" required autocomplete="name">
+                                <input id="contact-name" type="text" name="FNAME" placeholder="Full Name" class="input input-bordered w-full" required autocomplete="name">
                             </div>
                             <div class="form-control">
                                 <label class="label" for="contact-email">
